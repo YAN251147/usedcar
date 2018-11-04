@@ -202,7 +202,7 @@ app.post("/tijiao" , (req,res)=>{
 		var form = new formidable.IncomingForm();
 		//处理post请求
 		form.parse(req, function(err, fields, files) {
-		    //创建文件夹，Sync表示同步，这样就TMD不用写回调函数里面了！！
+		    //创建文件夹，Sync表示同步
 		    fs.mkdirSync(path.resolve(__dirname , "./images/carimages/" + (maxid + 1)));
 		    fs.mkdirSync(path.resolve(__dirname , "./images/carimages/" + (maxid + 1) + "/view"));
 		    fs.mkdirSync(path.resolve(__dirname , "./images/carimages/" + (maxid + 1) + "/inner"));

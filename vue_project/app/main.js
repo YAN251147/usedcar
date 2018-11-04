@@ -17,7 +17,7 @@ const store  = new Vuex.Store(storeobj);
 const router = new VueRouter(route);
 
 
-//传说中的路由守卫
+//传说中的路由守卫。
 router.beforeEach((to, from, next) => {
     if( to.fullPath != "/login"){
        store.dispatch("userinfo/fetchme",{next})
